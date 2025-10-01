@@ -1,4 +1,5 @@
-# Exercise
+# In this exercise you will write and read your class SalaryEmployee to and from a file salary_employee.csv in
+# format of comma separates values .
 
 def my_split(sentence, sep):
     lst = []
@@ -14,7 +15,6 @@ def my_split(sentence, sep):
 
     return (lst)
 
-
 def my_join(lst, sep):
     mystr = ''
     for elem in lst[0:-1]:
@@ -23,12 +23,10 @@ def my_join(lst, sep):
 
     return (mystr)
 
-
 class Employee:
     def __init__(self, id, name):
         self.id = id
         self.name = name
-
 
 class SalaryEmployee(Employee):
     def __init__(self, id, name, monthly_salary):
@@ -37,7 +35,6 @@ class SalaryEmployee(Employee):
 
     def calculate_payroll(self):
         return self.monthly_salary
-
 
 while True:
     print(
@@ -57,8 +54,6 @@ while True:
                 salary_employees.append(SalaryEmployee(id, name, salary))
                 id += 1
 
-
-    # Put your code here
     elif selection == 2:
         openfile = open("salary_employee.csv", "w")
         try:
